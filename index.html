@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>張博軒 專業名片 V1 </title>
+    <title>張博軒 專業名片 V1</title>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 <body>
     <script>
-      const JACK_DATA = {
+        const JACK_DATA = {
             LIFF_ID: "2009678095-bKSTnWIJ",
             BASE_URL: "https://joannahsu0327-maker.github.io/Jack/",
             IMG_MAIN: "JACK_IMAGE.jpg",
             IMG_INTRO: "DFP_IMAGE.jpg",
             name: "張博軒",
             title: "商業成長顧問 | 商業教育",
-            intro: "幫企業從流量混亂 走向穩定成交",       
-            feature_Title: "服務項目", 
-            item1: "📈 更穩定的客源方式",
-            item2: "💰 提升成交率（不是靠感覺）",
-            item3: "⚙️ 把現在做的事變成流程",
-            item4: "🧠 看懂下一步怎麼走",      
+            intro: "與新加坡國際資本體系合作\n協助企業建立可放大的商業結構",
+            hintText: "還不確定從哪開始？",
+            feature_Title: "你現在不是做不好\n是你的成長，還沒變成系統：", 
+            item1: "⚙️ 把你現在有效的成交方式 → 變成可複製系統",
+            item2: "📈 讓業績可以預測，而不是忽高忽低",
+            item3: "🧠 找出真正卡住成長的關鍵，而不是一直試錯",
+            item4: "👥 讓團隊也能成交，而不是全部靠你",      
             url_Booking: "https://line.me/ti/p/l3Vd7yYLtP",
             url_IG: "https://www.instagram.com/bboy_bigbear",
             phone: "0956086826"
         };
+
         async function main() {
             try {
                 await liff.init({ liffId: JACK_DATA.LIFF_ID });
@@ -50,16 +52,17 @@
                                 "hero": { "type": "image", "url": JACK_DATA.BASE_URL + JACK_DATA.IMG_INTRO + ts, "size": "full", "aspectRatio": "20:13", "aspectMode": "cover" }, 
                                 "body": { "type": "box", "layout": "vertical", "spacing": "lg", "contents": [
                                     { "type": "text", "text": JACK_DATA.intro, "size": "xs", "color": "#888888", "wrap": true },
-                                    { "type": "text", "text": JACK_DATA.feature_Title, "weight": "bold", "size": "lg", "color": "#fb966e" },
+                                    { "type": "text", "text": JACK_DATA.feature_Title, "weight": "bold", "size": "md", "color": "#fb966e", "wrap": true },
                                     { "type": "box", "layout": "vertical", "spacing": "sm", "contents": [
-                                        { "type": "text", "text": JACK_DATA.item1, "size": "sm" },
-                                        { "type": "text", "text": JACK_DATA.item2, "size": "sm" },
-                                        { "type": "text", "text": JACK_DATA.item3, "size": "sm" },
-                                        { "type": "text", "text": JACK_DATA.item4, "size": "sm" }
+                                        { "type": "text", "text": JACK_DATA.item1, "size": "xs", "wrap": true },
+                                        { "type": "text", "text": JACK_DATA.item2, "size": "xs", "wrap": true },
+                                        { "type": "text", "text": JACK_DATA.item3, "size": "xs", "wrap": true },
+                                        { "type": "text", "text": JACK_DATA.item4, "size": "xs", "wrap": true }
                                     ]}
                                 ]},
-                                "footer": { "type": "box", "layout": "vertical", "contents": [ 
-                                    { "type": "button", "style": "primary", "color": "#fb966e", "action": { "type": "uri", "label": "預約諮詢", "uri": JACK_DATA.url_Booking } } 
+                                "footer": { "type": "box", "layout": "vertical", "spacing": "sm", "contents": [ 
+                                    { "type": "text", "text": JACK_DATA.hintText, "size": "xs", "color": "#aaaaaa", "align": "center" },
+                                    { "type": "button", "style": "primary", "color": "#fb966e", "action": { "type": "uri", "label": "立即預約諮詢", "uri": JACK_DATA.url_Booking } } 
                                 ] }
                             },
                             { 
