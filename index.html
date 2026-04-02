@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>張博軒 專業名片 V1 </title>
+    <title>張博軒 專業名片 V1</title>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 <body>
     <script>
-      const JACK_DATA = {
+        const JACK_DATA = {
             LIFF_ID: "2009678095-bKSTnWIJ",
             BASE_URL: "https://joannahsu0327-maker.github.io/Jack/",
             IMG_MAIN: "JACK_IMAGE.jpg",
@@ -16,20 +16,18 @@
             name: "張博軒",
             title: "商業成長顧問 | 商業教育",
             intro: "幫企業從流量混亂 走向穩定成交",
-            
             feature_Title: "服務項目", 
             item1: "📈 更穩定的客源方式",
             item2: "💰 提升成交率（不是靠感覺）",
             item3: "⚙️ 把現在做的事變成流程",
             item4: "🧠 看懂下一步怎麼走",
             item5: "🏠 地政代書協作諮詢",
-            
             url_Booking: "https://line.me/ti/p/l3Vd7yYLtP",
             url_IG: "https://www.instagram.com/bboy_bigbear",           
             phone: "0956086826"
         };
 
-async function main() {
+        async function main() {
             try {
                 await liff.init({ liffId: JACK_DATA.LIFF_ID });
                 if (!liff.isLoggedIn()) { liff.login(); return; }
@@ -64,7 +62,7 @@ async function main() {
                                     ]}
                                 ]},
                                 "footer": { "type": "box", "layout": "vertical", "contents": [ 
-                                    { "type": "button", "style": "primary", "color": "#fb966e", "action": { "type": "uri", "label": "預約諮詢", "uri": JACK_DATA_DATA.url_Booking } } 
+                                    { "type": "button", "style": "primary", "color": "#fb966e", "action": { "type": "uri", "label": "預約諮詢", "uri": JACK_DATA.url_Booking } } 
                                 ] }
                             },
                             { 
@@ -84,10 +82,8 @@ async function main() {
                 }]);
 
                 if (res) {
-                    // 分享成功後關閉視窗
                     liff.closeWindow();
                 } else {
-                    // 使用者取消分享
                     console.log("TargetPicker cancelled");
                 }
             } catch (err) { 
